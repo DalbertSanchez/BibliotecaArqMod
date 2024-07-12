@@ -7,5 +7,7 @@ namespace BibliotecaArqMod.EP_Usuario.Domain.Entities
     {
         [Column("IdEstadoPrestamo")]
         public override int Id { get; set; }
+        public string? Descripcion { get; set; }
+        public bool Estado { get; set; }
     }
 }

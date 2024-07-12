@@ -8,7 +8,7 @@ namespace BibliotecaArqMod.Infrastructure.Logger.Services
     /// de que se haga un log de cada uno de los procedimientos que el usuario vaya a realizar 
     /// 
     /// </summary>
-    internal class LoggerServices : ILoggerServices 
+    public class LoggerServices : ILoggerServices 
     {
     }
 }

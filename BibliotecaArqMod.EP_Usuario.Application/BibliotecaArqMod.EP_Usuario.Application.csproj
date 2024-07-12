@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaArqMod.EP_Usuario.Persistence\BibliotecaArqMod.EP_Usuario.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
