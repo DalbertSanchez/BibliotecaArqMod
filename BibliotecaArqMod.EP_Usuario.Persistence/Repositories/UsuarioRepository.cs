@@ -37,7 +37,7 @@ namespace BibliotecaArqMod.EP_Usuario.Persistence.Repositories
             }
 
             // Utilizar el método DeleteEntityUsuario para eliminar la entidad con los datos de eliminación
-            UsuarioMapper.DeleteEntityUsuario(entity, usuarioToDelete);
+            UsuarioMapper.DeleteEntityUsuario(usuarioToDelete,entity);
 
             // Actualizar la entidad en el contexto y guardar los cambios en la base de datos
             usuarioToDelete.esActivo = false;
@@ -64,11 +64,23 @@ namespace BibliotecaArqMod.EP_Usuario.Persistence.Repositories
 
         public void Update(Usuario entity)
         {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
+
+            // Buscar la entidad existente en la base de datos
             Usuario usuarioToUpdate = this.context.Usuario.Find(entity.Id);
+
+            if (usuarioToUpdate == null)
+            {
+                throw new ArgumentException("Usuario no encontrado");
+            }
+
+            // Actualizar la entidad con los datos del modelo
             UsuarioMapper.UpdateEntityUsuario(entity, usuarioToUpdate);
 
+            // Actualizar la entidad en el contexto y guardar los cambios
             this.context.Usuario.Update(usuarioToUpdate);
             this.context.SaveChanges();
         }
+
     }
 }

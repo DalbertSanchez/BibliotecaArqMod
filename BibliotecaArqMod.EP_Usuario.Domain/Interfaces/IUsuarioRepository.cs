@@ -11,6 +11,5 @@ namespace BibliotecaArqMod.EP_Usuario.Domain.Interfaces
     /// </summary>
     public interface IUsuarioRepository : IBaseRepository<Usuario, int>
     {
-        
     }
 }

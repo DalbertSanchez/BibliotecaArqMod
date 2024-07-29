@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BibliotecaArqMod.Common.Data\BibliotecaArqMod.Common.Data.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaArqMod.EP_Usuario.Application\BibliotecaArqMod.EP_Usuario.Application.csproj" />
     <ProjectReference Include="..\BibliotecaArqMod.EP_Usuario.Persistence\BibliotecaArqMod.EP_Usuario.Persistence.csproj" />
   </ItemGroup>
 

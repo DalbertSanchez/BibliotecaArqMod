@@ -1,6 +1,4 @@
-﻿
-
-namespace BibliotecaArqMod.EP_Usuario.Application.Core
+﻿namespace BibliotecaArqMod.EP_Usuario.Application.Core
 {
     public class ServiceResult
     {
