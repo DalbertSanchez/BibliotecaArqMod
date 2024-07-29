@@ -3,6 +3,7 @@ using BibliotecaArqMod.EP_Usuario.Domain.Entities;
 using BibliotecaArqMod.EP_Usuario.Domain.Interfaces;
 using BibliotecaArqMod.EP_Usuario.Persistence.Context;
 using BibliotecaArqMod.EP_Usuario.Persistence.Mappeo;
+using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaArqMod.EP_Usuario.Persistence.Repositories
 {
@@ -48,7 +49,7 @@ namespace BibliotecaArqMod.EP_Usuario.Persistence.Repositories
 
         public bool Exists(Expression<Func<EstadoPrestamo, bool>> expression)
         {
-            throw new NotImplementedException();
+            return context.Set<EstadoPrestamo>().Any(expression);
         }
 
         public List<EstadoPrestamo> GetAll()

@@ -1,10 +1,10 @@
-﻿namespace BibliotecaArqMod.EP_Usuario.Persistence.Models
+﻿
+namespace BibliotecaArqMod.EP_Usuario.Persistence.Models
 {
-    public class EstadoPrestamoModel 
+    public class EstadoPrestamoModel : BaseModel
     {
-        public int Id { get; set; }
+        //Atributos de la entidad EstadoPrestamo
         public string? Descripcion { get; set; }
-        public bool? Estado { get; set; }
-        public DateTime? FechaCreacion { get; set; }
+        public bool Estado { get; set; }
     }
 }

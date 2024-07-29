@@ -1,6 +1,16 @@
+using BibliotecaArqMod.EP_Usuario.IOC.Dependencies;
+using BibliotecaArqMod.EP_Usuario.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Services.AddDbContext<BibliotecaContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaContext")));
+
+
+// Agregar las dependencias de los modulos
+builder.Services.AddBibliotecaDependency();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

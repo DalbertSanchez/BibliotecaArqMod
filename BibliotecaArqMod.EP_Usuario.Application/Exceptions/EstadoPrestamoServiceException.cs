@@ -3,9 +3,9 @@ namespace BibliotecaArqMod.EP_Usuario.Application.Exeptions
 {
     public class EstadoPrestamoServiceException : Exception
     {
-        public EstadoPrestamoServiceException():base() 
-        { 
-        
+        public EstadoPrestamoServiceException(string message) : base(message)
+        {
+
         }
     }
 }

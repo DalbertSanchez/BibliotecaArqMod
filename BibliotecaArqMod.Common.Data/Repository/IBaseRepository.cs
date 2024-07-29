@@ -18,8 +18,10 @@ namespace BibliotecaArqMod.Common.Data.Repository
     /// <typeparam name="TEntity"> TEntity va a recibir la entidad o modulo </typeparam>
     /// 
     /// <typeparam name="TType"> TType va a recibir el tipo de dato que sea la entidad o modulo </typeparam>
+    
     public interface IBaseRepository<TEntity, TType> where TEntity : class
     {
+       
         void Create(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);
