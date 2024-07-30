@@ -89,7 +89,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
             catch
             {
-                ViewBag.Message = $"Error al obtener la lista de usuarios";
+                ViewBag.Message = $"Error al crear el usuario";
                 return View(createModel);
             }
         }
@@ -132,7 +132,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
             catch
             {
-                ViewBag.Message = "Ocurrió un error al actualizar el usuario.";
+                ViewBag.Message = "Ocurrio un error al actualizar el usuario.";
                 return View(usuarioUpdateDto);
             }
         }

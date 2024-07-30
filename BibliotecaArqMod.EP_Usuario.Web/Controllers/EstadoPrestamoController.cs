@@ -39,7 +39,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
             catch(Exception ex) 
             {
-                ViewBag.Message = $"Error al obtener la lista de estados de préstamo";
+                ViewBag.Message = $"Error al obtener la lista de estados de prestamo";
                 return View();
             }
            
@@ -61,7 +61,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
             catch(Exception ex) 
             { 
-                ViewBag.Message = $"Error al obtener los detalles del estado de préstamo por el ID: {id}";
+                ViewBag.Message = $"Error al obtener los detalles del estado de prestamo por el ID: {id}";
             return View("Error");
             
             }
@@ -92,7 +92,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
             catch(Exception ex)
             {
-                ViewBag.Message = $"Error al crear el estado de préstamo";
+                ViewBag.Message = $"Error al crear el estado de prestamo";
                 return View(createModel);
             }
         }
@@ -134,7 +134,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
             catch(Exception ex) 
             {
-                ViewBag.Message = $"Ocurrio un error al actualizar el estado de préstamo";
+                ViewBag.Message = $"Ocurrio un error al actualizar el estado de prestamo";
                 return View(estadoPrestamoUpdateDto);
             }
         }
