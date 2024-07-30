@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BibliotecaArqMod.EP_Usuario.Web.Models.UsuarioModel.UsuarioGetModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de Usuarios</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreApellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clave)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.esActivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaCreacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreApellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.esActivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaCreacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) 
+         
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,58 @@
+﻿@model BibliotecaArqMod.EP_Usuario.Web.Models.UsuarioModel.UsuarioGetModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Usuario Edit</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input type ="hidden" asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombreApellidos" class="control-label"></label>
+                <input asp-for="nombreApellidos" class="form-control" />
+                <span asp-validation-for="nombreApellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="correo" class="control-label"></label>
+                <input asp-for="correo" class="form-control" />
+                <span asp-validation-for="correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clave" class="control-label"></label>
+                <input asp-for="clave" class="form-control" />
+                <span asp-validation-for="clave" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="esActivo" /> @Html.DisplayNameFor(model => model.esActivo)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="fechaCreacion" class="control-label"></label>
+                <input asp-for="fechaCreacion" class="form-control" readonly />
+                <span asp-validation-for="fechaCreacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
