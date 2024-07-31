@@ -121,7 +121,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
 
             try
             {
-                var result = await httpClientService.PostAsync<UsuarioObjectResult>("EstadoPrestamo/UpdateEstadoPrestamo", estadoPrestamoUpdateDto);
+                var result = await httpClientService.PostAsync<EstadoPrestamoObjectResult>("EstadoPrestamo/UpdateEstadoPrestamo", estadoPrestamoUpdateDto);
                 if (result.success)
                 {
                     return RedirectToAction(nameof(Index));

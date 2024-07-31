@@ -20,7 +20,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             this.httpClientService = httpClientService;
         }
 
-        // GET: UsuarioController1
+        // GET: UsuarioController
         public async Task<ActionResult> Index()
         {
             try 
@@ -44,7 +44,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             
         }
 
-        // GET: UsuarioController1/Details/5
+        // GET: UsuarioController/Details/5
         public async Task<ActionResult> Details(int id)
         {
             try 
@@ -66,13 +66,13 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
            
         }
 
-        // GET: UsuarioController1/Create
+        // GET: UsuarioController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UsuarioController1/Create
+        // POST: UsuarioController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(UsuarioCreateModel createModel)
@@ -94,7 +94,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
             }
         }
 
-        // GET: UsuarioController1/Edit/5
+        // GET: UsuarioController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
             var usuarioObjectResult = await httpClientService.GetAsync<UsuarioObjectResult>($"Usuario/GetUsuariosByID?id={id}");
@@ -107,7 +107,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
         }
 
 
-        // POST: UsuarioController1/Edit/5
+        // POST: UsuarioController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(UsuarioUpdateDto usuarioUpdateDto)
