@@ -132,7 +132,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
                     return View(estadoPrestamoUpdateDto);
                 }
             }
-            catch(Exception ex) 
+            catch(Exception ex)
             {
                 ViewBag.Message = $"Ocurrio un error al actualizar el estado de prestamo";
                 return View(estadoPrestamoUpdateDto);

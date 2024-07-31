@@ -130,7 +130,7 @@ namespace BibliotecaArqMod.EP_Usuario.Web.Controllers
                     return View(usuarioUpdateDto);
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 ViewBag.Message = "Ocurrio un error al actualizar el usuario.";
                 return View(usuarioUpdateDto);
